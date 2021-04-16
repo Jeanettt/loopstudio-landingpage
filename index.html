@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;300&display=swap" rel="stylesheet">
+  
+  <title>Loopstudios | Immersive experiences that deliver</title>
+
+</head>
+<body id="test">
+  <div id="mobileNavOverlay"></div>
+<header>
+  <nav>
+    <img src="images/logo.svg" alt="Loopstudio logo">
+    <ul id="myNav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+    <a href="javascript:void(0)" id="mobileicon" onclick="openMobileNav()">
+      <i id="hamburger"></i>
+    </a>  
+    <a href="javascript:void(0)" id="mobileiconclose" onclick="closeMobileNav()">
+      <i id="iconclose"></i>
+    </a> 
+  </nav>
+  <h1>Immersive experiences that deliver</h1>
+</header>
+
+<main>
+  <section class="intro">
+    <picture>
+      <source 
+         media="(min-width: 375px)"
+         srcset="images/desktop/image-interactive.jpg">
+      <img src="images/mobile/image-interactive.jpg" 
+      alt="guy wearing virtual reality headset and looking immersed">
+    </picture>
+    <div class="introtext">
+      <h2>The leader in interactive <abbr title="Virtual Reality">VR</abbr></h2>
+      <p>
+        Founded in 2011, Loopstudios has been producing world-class virtual reality 
+        projects for some of the best companies around the globe. Our award-winning 
+        creations have transformed businesses through digital experiences that bind 
+        to their brand.
+      </p>
+    </div>
+  </section>
+
+  <section class="ourcreations">
+    <h2>Our creations</h2>
+    <a href="#" class="button">See all</a>
+  
+    <ul class="creationslist">
+      <li class="image1"><a href="#"><h3>Deep <br>earth</h3></a></li>
+      <li class="image2"><a href="#"><h3>Night <br>arcade</h3></a></li>
+      <li class="image3"><a href="#"><h3>Soccer <br>team VR</h3></a></li>
+      <li class="image4"><a href="#"><h3>The <br>grid</h3></a></li>
+      <li class="image5"><a href="#"><h3>From up <br>above VR</h3></a></li>
+      <li class="image6"><a href="#"><h3>Pocket <br>borealis</h3></a></li>
+      <li class="image7"><a href="#"><h3>The <br>curiosity</h3></a></li>
+      <li class="image8"><a href="#"><h3>Make it <br>fisheye</h3></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <img src="images/logo.svg" alt="Loopstudio logo">
+  <nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+  </nav>
+  <div class="socialicons">
+    <ul>
+      <li><a href="#"><i class="socialicon facebook"></i><span class="visuallyhidden">Facebook</span></a></li>
+      <li><a href="#"><i class="socialicon twitter"></i><span class="visuallyhidden">Twitter</span></a></li>
+      <li><a href="#"><i class="socialicon pinterest"></i><span class="visuallyhidden">Pinterest</span></a></li>
+      <li><a href="#"><i class="socialicon instagram"></i><span class="visuallyhidden">Instagram</span></a></li>
+    </ul>
+  </div>
+  <div class="attribution">
+    <p>© 2021 Loopstudios. All rights reserved.</p>
+  </div>   
+</footer>  
+
+<script>
+  function openMobileNav() {
+    document.getElementById("myNav").style.display = "block";
+    document.getElementById("mobileicon").style.display = "none";
+    document.getElementById("mobileiconclose").style.display = "block";
+    document.getElementById("myNav").style.order = "3";
+    document.getElementById("mobileNavOverlay").style.display = "block";
+    document.getElementById("test").style.overflow = "hidden";
+  }
+  function closeMobileNav() {
+    document.getElementById("myNav").style.display = "none";
+    document.getElementById("mobileiconclose").style.display = "none";
+    document.getElementById("mobileicon").style.display = "block";
+    document.getElementById("mobileNavOverlay").style.display = "none";
+    document.getElementById("test").style.overflow = "visible";
+  }
+  // Fix navMenu bug
+  window.onresize = doALoadOfStuff;
+  function doALoadOfStuff() {
+    const mediaQuery = window.matchMedia('(min-width: 501px)');
+    if (mediaQuery.matches) {
+      // Display nav menu links on desktop view
+      document.getElementById("myNav").style.display = "block";
+      document.getElementById("test").style.overflow = "visible";
+    } else {
+      // Hide nav menu in case it was still open from the last time you were in mobile view
+      document.getElementById("myNav").style.display = "none";
+      document.getElementById("mobileiconclose").style.display = "none";
+      document.getElementById("mobileicon").style.display = "block";
+      document.getElementById("mobileNavOverlay").style.display = "none";
+      
+    }
+  }
+</script>
+</body>
+</html>
