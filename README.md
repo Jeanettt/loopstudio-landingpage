@@ -1,6 +1,9 @@
 # Loopstudio landingpage
 This is front end exercise I did from frontendmentor.io. The goal was to create a pixel perfect and interactive landing page using modern HTML5, CSS and ES6 javascript.
 
+## View result
+To see the page I created visit https://jeanettt.github.io/loopstudio-landingpage/
+
 ## Approach
 1. This was the first time I used Git, so I had to set it up.
 2. Then I started structuring the HTML.
